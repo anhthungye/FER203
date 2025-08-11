@@ -1,0 +1,83 @@
+/* Reset chung */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  display: flex;
+  background-color: #555; /* Nền xám */
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:first-child {
+  background-color: #4CAF50; /* Home xanh lá */
+}
+
+.navbar a:last-child {
+  background-color: black; /* Login đen */
+}
+
+.navbar a:hover {
+  background-color: #777;
+}
+
+/* ==== Header: Hello React ==== */
+.header {
+  margin: 30px 0;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.header h1 .react {
+  color: blue;
+  font-weight: bold;
+}
+
+/* ==== React Logo Section ==== */
+.react-logo-section {
+  margin: 40px 0;
+}
+
+.react-logo {
+  width: 200px;
+  height: auto;
+}
+
+.react-logo-section h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.subtext {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #222;
+}
+
+/* ==== Display Text ==== */
+.display-text p {
+  font-size: 28px;
+  font-weight: bold;
+  color: blue;
+  margin-top: 40px;
+}
