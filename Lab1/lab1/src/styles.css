@@ -1,0 +1,90 @@
+/* Font toàn bộ app */
+body, .custom-font, .custom-navbar, .custom-filter, .custom-sort, .custom-badge, .custom-toast {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f5f7f2 !important;
+}
+
+/* Navbar link style */
+.custom-navbar-link {
+  color: #222 !important;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+.custom-navbar-link.active,
+.custom-navbar-link:focus,
+.custom-navbar-link:hover {
+  color: #ff9800 !important;
+}
+.custom-navbar-link.active::after,
+.custom-navbar-link:focus::after,
+.custom-navbar-link:hover::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #ff9800;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+/* Navbar brand */
+.custom-navbar-brand {
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Filter select & input */
+.custom-filter-select,
+.custom-filter-input {
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.custom-filter-icon {
+  color: #ff9800 !important;
+}
+
+/* Badge */
+.custom-badge-btn .custom-badge {
+  background: #ff9800 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* Toast */
+.custom-toast .toast-body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  background: #ff9800 !important;
+  color: #fff !important;
+}
+
+/* Button custom */
+.custom-btn {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 3rem !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #23422d !important;
+}
+
+.custom-btn-view {
+  background-color: #23422d !important;
+  border-color: #23422d !important;
+  color: #fff !important;
+  font-weight: 500;
+}
+.custom-btn-view:hover,
+.custom-btn-view:focus {
+  background-color: #1a311f !important;
+  border-color: #1a311f !important;
+  color: #fff !important;
+}
