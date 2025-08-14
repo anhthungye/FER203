@@ -62,6 +62,25 @@ const RecipeGrid = ({
   return (
     <>
       <Container className="py-5">
+        
+        <Row className="g-4">
+          {paginatedRecipes.map((recipe, idx) => (
+            <Col key={idx} xs={12} md={6} lg={4}>
+              <RecipeCard
+                recipe={recipe}
+                onView={setSelectedRecipe}
+                onAddFavourite={onAddFavourite}
+                isFavourited={!!favourites.find(f => f.title === recipe.title)}
+              />
+            </Col>
+          ))}
+          {paginatedRecipes.length === 0 && (
+            <Col xs={12} className="text-center text-muted py-5">
+              <h4>No recipes found</h4>
+              <p>Try adjusting your filters or search terms.</p>
+            </Col>
+          )}
+        </Row>
         <Row className="mb-3 align-items-center">
           <Col xs={12} md={6}>
             <Form.Select
@@ -94,24 +113,6 @@ const RecipeGrid = ({
               <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />
             </Pagination>
           </Col>
-        </Row>
-        <Row className="g-4">
-          {paginatedRecipes.map((recipe, idx) => (
-            <Col key={idx} xs={12} md={6} lg={4}>
-              <RecipeCard
-                recipe={recipe}
-                onView={setSelectedRecipe}
-                onAddFavourite={onAddFavourite}
-                isFavourited={!!favourites.find(f => f.title === recipe.title)}
-              />
-            </Col>
-          ))}
-          {paginatedRecipes.length === 0 && (
-            <Col xs={12} className="text-center text-muted py-5">
-              <h4>No recipes found</h4>
-              <p>Try adjusting your filters or search terms.</p>
-            </Col>
-          )}
         </Row>
       </Container>
       <Modal

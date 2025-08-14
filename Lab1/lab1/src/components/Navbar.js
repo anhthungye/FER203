@@ -9,7 +9,7 @@ const NavbarComponent = ({ favouritesCount, onShowRequestForm }) => {
     <Navbar bg="white" expand="lg" className="shadow-sm py-3 custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center custom-navbar-brand">
-          <Leaf className="me-2" size={32} color="#ff9800" />
+          <Leaf className="me-2" size={32} color="#388250ff" />
           <span className="fw-semibold fs-5 text-dark">Healthy Recipe Finder</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
