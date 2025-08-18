@@ -1,0 +1,90 @@
+/* Toàn trang nền sáng nhẹ */
+body {
+  background: #fdfdfd;
+  font-family: "Segoe UI", sans-serif;
+  color: #1d3557;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pastel Navbar */
+.navbar-pastel {
+  background-color: #a8dadc !important; /* xanh mint pastel */
+}
+.navbar-pastel .navbar-brand,
+.navbar-pastel .nav-link {
+  color: #1d3557 !important;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+.navbar-pastel .nav-link:hover {
+  color: #457b9d !important;
+}
+
+/* Pastel Footer */
+.footer-pastel {
+  background-color: #f1faee;
+  color: #1d3557;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 2px solid #a8dadc;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #e0fbfc, #f1faee);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #a8dadc;
+}
+.hero-section h1 {
+  font-weight: 700;
+  color: #1d3557;
+}
+.hero-section p {
+  color: #457b9d;
+  font-size: 1.1rem;
+}
+
+/* Student Card */
+.student-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Avatar fix chiều cao */
+.student-card .card-img-top,
+.student-card .no-avatar {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Placeholder khi không có avatar */
+.student-card .no-avatar {
+  background-color: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Card body luôn ở dưới */
+.student-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.student-card .btn {
+  margin-top: auto;
+}
