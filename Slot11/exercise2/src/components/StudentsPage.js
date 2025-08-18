@@ -17,14 +17,12 @@ function StudentsPage({ quickSearch }) {
   const filteredAndSorted = useMemo(() => {
     let result = [...studentData];
 
-    // 🔍 Quick search (từ Navbar)
     if (quickSearch) {
       result = result.filter((s) =>
         s.name.toLowerCase().includes(quickSearch.toLowerCase())
       );
     }
 
-    // 🔍 Search trong Filters (tên + email)
     if (search) {
       result = result.filter(
         (s) =>
@@ -33,15 +31,12 @@ function StudentsPage({ quickSearch }) {
       );
     }
 
-    // Filter theo tuổi
     if (ageFilter === "<=20") result = result.filter((s) => s.age <= 20);
     if (ageFilter === "21-25") result = result.filter((s) => s.age >= 21 && s.age <= 25);
     if (ageFilter === ">25") result = result.filter((s) => s.age > 25);
 
-    // Filter avatar
     if (hasAvatar) result = result.filter((s) => s.avatar);
 
-    // Sort
     if (sortBy === "age-asc") result.sort((a, b) => a.age - b.age);
     if (sortBy === "age-desc") result.sort((a, b) => b.age - a.age);
     if (sortBy === "name-asc") result.sort((a, b) => a.name.localeCompare(b.name));
