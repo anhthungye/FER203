@@ -7,20 +7,40 @@ const countries = ['Viet Nam', 'Korea', 'Italy', 'United States', 'Japan', 'Fran
 function AddressTab({ data, onChange }) {
   return (
     <Form>
-      <Form.Group controlId="street" className="mb-3">
-        <Form.Label>Street Address</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter street address"
-          value={data.street}
-          onChange={(e) => onChange('address', 'street', e.target.value)}
-          isInvalid={!data.street}
-          required
-        />
-        <Form.Control.Feedback type="invalid">
-          Please enter street address
-        </Form.Control.Feedback>
-      </Form.Group>
+      <Row className="mb-3">
+        <Col md={6}>
+          <Form.Group controlId="streetName">
+            <Form.Label>Street Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter street name"
+              value={data.streetName}
+              onChange={(e) => onChange('address', 'streetName', e.target.value)}
+              isInvalid={!data.streetName}
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              Please enter street name
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          <Form.Group controlId="streetNumber">
+            <Form.Label>Street Number</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter street number"
+              value={data.streetNumber}
+              onChange={(e) => onChange('address', 'streetNumber', e.target.value)}
+              isInvalid={!data.streetNumber}
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              Please enter street number
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Col>
+      </Row>
 
       <Row className="mb-3">
         <Col md={6}>
@@ -39,41 +59,7 @@ function AddressTab({ data, onChange }) {
             </Form.Control.Feedback>
           </Form.Group>
         </Col>
-        <Col md={6}>
-          <Form.Group controlId="province">
-            <Form.Label>State/Province</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter state or province"
-              value={data.province}
-              onChange={(e) => onChange('address', 'province', e.target.value)}
-              isInvalid={!data.province}
-              required
-            />
-            <Form.Control.Feedback type="invalid">
-              Please enter state/province
-            </Form.Control.Feedback>
-          </Form.Group>
-        </Col>
-      </Row>
 
-      <Row className="mb-3">
-        <Col md={6}>
-          <Form.Group controlId="zipCode">
-            <Form.Label>Zip/Postal Code</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter zip or postal code"
-              value={data.zipCode}
-              onChange={(e) => onChange('address', 'zipCode', e.target.value)}
-              isInvalid={!data.zipCode}
-              required
-            />
-            <Form.Control.Feedback type="invalid">
-              Please enter zip/postal code
-            </Form.Control.Feedback>
-          </Form.Group>
-        </Col>
         <Col md={6}>
           <Form.Group controlId="country">
             <Form.Label>Country</Form.Label>

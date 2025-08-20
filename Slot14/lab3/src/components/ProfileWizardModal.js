@@ -1,5 +1,5 @@
 import React, { useState, useReducer, useMemo, useCallback } from 'react';
-import { Modal, Tab, Tabs, Toast, Button } from 'react-bootstrap';
+import { Modal, Tab, Tabs, Toast, ProgressBar, Button } from 'react-bootstrap';
 import AboutTab from './AboutTab';
 import AccountTab from './AccountTab';
 import AddressTab from './AddressTab';
@@ -10,9 +10,7 @@ const initialState = {
   about: {
     firstName: '',
     lastName: '',
-    age: '',
     email: '',
-    phone: '',
     avatar: null,
     avatarPreview: ''
   },
@@ -24,10 +22,9 @@ const initialState = {
     secretAnswer: ''
   },
   address: {
-    street: '',
+    streetName: '',
+    streetNumber: '',
     city: '',
-    province: '', 
-    zipCode: '',
     country: ''
   }
 };
@@ -59,15 +56,14 @@ function ProfileWizardModal({ show, onHide }) {
   const [showSummary, setShowSummary] = useState(false);
 
   const steps = ['About', 'Account', 'Address'];
+  const progress = ((state.step + 1) / steps.length) * 100;
 
   const isAboutValid = useMemo(() => {
-    const { firstName, lastName, age, email, phone, avatar } = state.about;
+    const { firstName, lastName, email, avatar } = state.about;
     if (!firstName.trim() || !lastName.trim()) return false;
-    const ageValid = Number(age) >= 18 && Number(age) <= 100;
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-    const phoneOk = /^\+?\d{10,15}$/.test(phone.trim());
     const avatarOk = !!avatar;
-    return ageValid && emailOk && phoneOk && avatarOk;
+    return emailOk && avatarOk;
     }, [state.about]);
 
   const isAccountValid = useMemo(() => {
@@ -89,12 +85,11 @@ function ProfileWizardModal({ show, onHide }) {
   }, [state.account]);
 
   const isAddressValid = useMemo(() => {
-    const { street, city, province, zipCode, country } = state.address;
+    const { streetName, streetNumber, city, country } = state.address;
     return (
-      street.trim() !== '' &&
+      streetName.trim() !== '' &&
+      streetNumber.trim() !== '' &&
       city.trim() !== '' &&
-      province.trim() !== '' &&
-      zipCode.trim() !== '' &&
       country.trim() !== ''
     );
   }, [state.address]);
@@ -151,6 +146,7 @@ function ProfileWizardModal({ show, onHide }) {
           <Modal.Title>Build Your Profile</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <ProgressBar now={progress} label={`${Math.round(progress)}%`} className="mb-3" />
           
           <Tabs activeKey={state.step} id="profile-wizard-tabs" className="mb-3">
             {steps.map((step, index) => (

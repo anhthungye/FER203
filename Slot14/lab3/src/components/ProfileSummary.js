@@ -11,7 +11,6 @@ function ProfileSummary({ show, onHide, data }) {
       <Modal.Body>
         <Card>
           <Card.Body>
-            <Card.Title className="text-center mb-4">Profile Summary</Card.Title>
             
             <div className="text-center mb-4">
               {data.about.avatarPreview ? (
@@ -36,9 +35,6 @@ function ProfileSummary({ show, onHide, data }) {
               <ListGroup.Item>
                 <strong>Email:</strong> {data.about.email}
               </ListGroup.Item>
-              <ListGroup.Item>
-                <strong>Phone:</strong> {data.about.phone}
-              </ListGroup.Item>
             </ListGroup>
 
             <Card.Subtitle className="mb-2">Account</Card.Subtitle>
@@ -54,13 +50,10 @@ function ProfileSummary({ show, onHide, data }) {
             <Card.Subtitle className="mb-2">Address</Card.Subtitle>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <strong>Street:</strong> {data.address.street}
+                <strong>Street:</strong> {data.address.streetNumber} {data.address.streetName} 
               </ListGroup.Item>
               <ListGroup.Item>
-                <strong>City:</strong> {data.address.city}, {data.address.state}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <strong>Postal Code:</strong> {data.address.zipCode}
+                <strong>City:</strong> {data.address.city}
               </ListGroup.Item>
               <ListGroup.Item>
                 <strong>Country:</strong> {data.address.country}
