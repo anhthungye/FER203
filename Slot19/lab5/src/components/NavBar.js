@@ -40,9 +40,11 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/" onClick={closeNavbar}>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/register" onClick={closeNavbar}>
-              Register
-            </Nav.Link>
+            {!isAuthenticated && (
+              <Nav.Link as={Link} to="/register" onClick={closeNavbar}>
+                Register
+              </Nav.Link>
+            )}
           </Nav>
           
           <Nav className="ms-auto align-items-center">
