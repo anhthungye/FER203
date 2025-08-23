@@ -1,0 +1,142 @@
+:root {
+  --primary-pastel: #a8dadc; /* xanh pastel */
+  --secondary-pastel: #f6bd60; /* vàng pastel nhẹ */
+  --accent-pastel: #ffb5a7; /* hồng pastel */
+  --success-pastel: #80ed99; /* xanh lá pastel */
+  --danger-pastel: #e63946; /* đỏ pastel đậm hơn */
+  --info-pastel: #b5c7f2; /* xanh nhạt */
+  --light-pastel: #fdfdfd;
+  --dark-pastel: #1d3557;
+  --border-radius-small: 4px;
+  --border-radius-large: 10px;
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+.register-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-title {
+  color: var(--dark-pastel);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 450px;
+  border: none;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+  background: var(--light-pastel);
+  overflow: hidden;
+}
+
+.register-card .card-body {
+  padding: 2.5rem;
+}
+
+.register-form .form-label {
+  color: var(--dark-pastel);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.register-input {
+  border: 2px solid var(--primary-pastel);
+  border-radius: var(--border-radius-small);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--light-pastel);
+}
+
+.register-input:focus {
+  border-color: var(--info-pastel);
+  box-shadow: 0 0 0 0.2rem rgba(168, 218, 220, 0.25);
+  background-color: var(--light-pastel);
+}
+
+.register-input.is-invalid {
+  border-color: var(--danger-pastel);
+}
+
+.register-input.is-valid {
+  border-color: var(--success-pastel);
+}
+
+.register-button {
+  background: #132845;
+  border: none;
+  border-radius: var(--border-radius-small);
+  padding: 0.875rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--light-pastel);
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  background: #2a4a6b;
+  color: var(--light-pastel);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+.register-login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--dark-pastel);
+}
+
+.register-login-link a {
+  color: var(--primary-pastel);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.register-login-link a:hover {
+  color: var(--info-pastel);
+  text-decoration: underline;
+}
+
+.invalid-feedback {
+  color: var(--danger-pastel);
+  font-size: 0.875rem;
+}
+
+.valid-feedback {
+  color: var(--success-pastel);
+  font-size: 0.875rem;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .register-container {
+    padding: 1rem;
+  }
+
+  .register-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .register-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+}

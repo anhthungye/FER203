@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Container, Toast, Row, Col, Alert } from 'react-bootstrap';
-import { Heart } from 'lucide-react';
+import { Container, Row, Col, Alert } from 'react-bootstrap';
 import { movies, allGenres } from './movies';
 import CustomNavbar from './components/Navbar';
 import CarouselHero from './components/MovieCarousel';

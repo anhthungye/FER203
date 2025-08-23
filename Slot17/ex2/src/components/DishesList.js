@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import SearchBar from "./SearchBar";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row } from "react-bootstrap";
 
 const DishesList = ({ dishes }) => {
   const { addToCart } = useContext(CartContext);

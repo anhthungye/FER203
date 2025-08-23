@@ -1,0 +1,76 @@
+:root {
+  --primary-pastel: #a8dadc;   /* xanh pastel */
+  --secondary-pastel: #f6bd60; /* vàng pastel nhẹ */
+  --accent-pastel: #ffb5a7;    /* hồng pastel */
+  --success-pastel: #80ed99;   /* xanh lá pastel */
+  --danger-pastel: #e63946;    /* đỏ pastel đậm hơn */
+  --info-pastel: #b5c7f2;      /* xanh nhạt */
+  --light-pastel: #fdfdfd;
+  --dark-pastel: #1d3557;
+
+  --border-radius-small: 4px;
+  --border-radius-large: 10px;
+
+  --shadow-soft: 0 2px 6px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
+
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #343a40;
+}
+
+body.dark-mode .form-control {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+  border-color: #444;
+}
+
+body.dark-mode .form-select {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+  border-color: #444;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

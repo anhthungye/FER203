@@ -1,0 +1,79 @@
+.custom-navbar {
+  background-color: var(--primary-pastel);
+  box-shadow: var(--shadow-medium);
+}
+
+.custom-navbar .navbar-brand {
+  color: var(--danger-pastel) !important;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.custom-navbar .nav-link {
+  color: var(--dark-pastel) !important;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--danger-pastel) !important;
+}
+
+.cart-link {
+  position: relative;
+  color: var(--dark-pastel) !important;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--danger-pastel);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.account-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.account-icon {
+  margin-right: 5px;
+}
+
+.favourites-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.favourites-icon {
+  margin-left: 5px;
+}
+
+.favourites-count {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.theme-toggle {
+  color: white;
+  cursor: pointer;
+}

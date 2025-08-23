@@ -1,4 +1,4 @@
-/* Tổng thể */
+Tổng thể
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fdfdfd;
@@ -207,3 +207,4 @@ body.dark .dishes-title {
   color: #ffd6e8; /* pastel hồng sáng hơn */
   text-shadow: 1px 1px 3px rgba(255,255,255,0.2);
 }
+
