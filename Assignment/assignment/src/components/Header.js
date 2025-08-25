@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Navbar bg="light" expand="lg" sticky="top" className="shadow-sm ecommerce-header">
-      <Navbar.Brand href="/" className="fw-bold fs-3">E-Commerce</Navbar.Brand>
+      <Navbar.Brand href="/" className="fw-bold fs-3 main-title">E-Commerce</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
