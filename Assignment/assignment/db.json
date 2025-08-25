@@ -1,0 +1,481 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 15 Pro Max",
+      "name": "Apple",
+      "category": "Smartphone",
+      "image": "/images/iphone15promax.jpg",
+      "price": 1199,
+      "salePrice": 1099,
+      "stock": 25,
+      "colors": [
+        "Black Titanium",
+        "White Titanium",
+        "Blue Titanium"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB",
+        "512GB",
+        "1TB"
+      ],
+      "releaseDate": "2023-09-22",
+      "features": [
+        "Chip A17 Pro mạnh mẽ",
+        "Màn hình 6.7\" Super Retina XDR",
+        "Camera 48MP quay video 4K",
+        "Face ID bảo mật cao",
+        "Pin bền cả ngày"
+      ],
+      "description": "Flagship Apple với chip A17 Pro, màn hình 6.7\" Super Retina XDR, camera 48MP, pin cả ngày.",
+      "tags": [
+        "hot",
+        "sale"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "iPhone 14",
+      "name": "Apple",
+      "category": "Smartphone",
+      "image": "/images/iphone14.jpg",
+      "price": 799,
+      "salePrice": 749,
+      "stock": 50,
+      "colors": [
+        "Midnight",
+        "Purple",
+        "Blue",
+        "Red"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2022-09-16",
+      "features": [
+        "Chip A15 Bionic",
+        "Màn hình 6.1\" Super Retina XDR",
+        "Camera kép 12MP",
+        "Chế độ Cinematic Mode",
+        "Kết nối 5G"
+      ],
+      "description": "Thiết kế quen thuộc, chip A15 Bionic, camera kép chất lượng, hiệu năng mượt mà.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "iPhone 13 Mini",
+      "name": "Apple",
+      "category": "Smartphone",
+      "image": "/images/iphone13mini.jpg",
+      "price": 699,
+      "stock": 30,
+      "colors": [
+        "Pink",
+        "Blue",
+        "Midnight",
+        "Starlight"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB"
+      ],
+      "releaseDate": "2021-09-24",
+      "features": [
+        "Thiết kế nhỏ gọn 5.4\"",
+        "Chip A15 Bionic",
+        "Camera kép 12MP",
+        "Face ID",
+        "Chế độ Night Mode"
+      ],
+      "description": "Nhỏ gọn 5.4\", hiệu năng mạnh mẽ, pin được cải thiện, thiết kế tinh tế.",
+      "tags": []
+    },
+    {
+      "id": "4",
+      "title": "Samsung Galaxy S23 Ultra",
+      "name": "Samsung",
+      "category": "Smartphone",
+      "image": "/images/galaxys23ultra.jpg",
+      "price": 1199,
+      "salePrice": 999,
+      "stock": 40,
+      "colors": [
+        "Phantom Black",
+        "Green",
+        "Lavender",
+        "Cream"
+      ],
+      "storageOptions": [
+        "256GB",
+        "512GB",
+        "1TB"
+      ],
+      "releaseDate": "2023-02-17",
+      "features": [
+        "Hỗ trợ bút S-Pen",
+        "Camera 200MP siêu nét",
+        "Snapdragon 8 Gen 2 tối ưu",
+        "Màn hình Dynamic AMOLED 2X",
+        "Pin 5000mAh với sạc nhanh"
+      ],
+      "description": "Flagship với S-Pen, camera 200MP, Snapdragon 8 Gen 2, màn hình Dynamic AMOLED 2X.",
+      "tags": [
+        "hot",
+        "sale"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Samsung Galaxy Z Fold 5",
+      "name": "Samsung",
+      "category": "Foldable",
+      "image": "/images/galaxyzfold5.jpg",
+      "price": 1799,
+      "stock": 15,
+      "colors": [
+        "Phantom Black",
+        "Icy Blue",
+        "Cream"
+      ],
+      "storageOptions": [
+        "256GB",
+        "512GB",
+        "1TB"
+      ],
+      "releaseDate": "2023-08-11",
+      "features": [
+        "Màn hình gập 7.6\" Dynamic AMOLED",
+        "Snapdragon 8 Gen 2",
+        "Hỗ trợ đa nhiệm mạnh mẽ",
+        "Thiết kế cao cấp",
+        "Pin 4400mAh"
+      ],
+      "description": "Điện thoại gập 7.6\", đa nhiệm mạnh, thiết kế cao cấp, bền bỉ với công nghệ mới.",
+      "tags": [
+        "hot"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Samsung Galaxy A54",
+      "name": "Samsung",
+      "category": "Mid-range",
+      "image": "/images/galaxya54.jpg",
+      "price": 449,
+      "salePrice": 399,
+      "stock": 60,
+      "colors": [
+        "Awesome Violet",
+        "Awesome Black",
+        "Awesome White"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB"
+      ],
+      "releaseDate": "2023-03-24",
+      "features": [
+        "Màn hình AMOLED 120Hz",
+        "Pin 5000mAh",
+        "Camera 50MP",
+        "Chống nước IP67",
+        "Kết nối 5G"
+      ],
+      "description": "Tầm trung nổi bật với màn AMOLED, pin 5000mAh, camera ấn tượng.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Xiaomi 13 Pro",
+      "name": "Xiaomi",
+      "category": "Smartphone",
+      "image": "/images/xiaomi13pro.jpg",
+      "price": 899,
+      "stock": 35,
+      "colors": [
+        "Ceramic White",
+        "Ceramic Black",
+        "Flora Green"
+      ],
+      "storageOptions": [
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2023-02-26",
+      "features": [
+        "Camera hợp tác Leica",
+        "Snapdragon 8 Gen 2",
+        "Sạc nhanh 120W",
+        "Màn hình AMOLED 120Hz",
+        "Pin 4820mAh"
+      ],
+      "description": "Camera hợp tác Leica, chip Snapdragon 8 Gen 2, sạc nhanh 120W, hiệu năng vượt trội.",
+      "tags": [
+        "hot"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Xiaomi Redmi Note 12",
+      "name": "Xiaomi",
+      "category": "Mid-range",
+      "image": "/images/redminote12.jpg",
+      "price": 299,
+      "salePrice": 249,
+      "stock": 80,
+      "colors": [
+        "Onyx Gray",
+        "Mint Green",
+        "Ice Blue"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB"
+      ],
+      "releaseDate": "2023-01-11",
+      "features": [
+        "Màn hình AMOLED 120Hz",
+        "Pin 5000mAh",
+        "Sạc nhanh 33W",
+        "Camera 108MP",
+        "Giá trị vượt trội"
+      ],
+      "description": "Phân khúc phổ thông, màn AMOLED 120Hz, pin 5000mAh, giá trị vượt trội.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Oppo Find X6 Pro",
+      "name": "Oppo",
+      "category": "Smartphone",
+      "image": "/images/oppofindx6pro.jpg",
+      "price": 1099,
+      "stock": 20,
+      "colors": [
+        "Black",
+        "Brown",
+        "Green"
+      ],
+      "storageOptions": [
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2023-03-24",
+      "features": [
+        "Camera Hasselblad",
+        "Màn hình 2K 120Hz",
+        "Sạc nhanh 100W",
+        "Snapdragon 8 Gen 2",
+        "Thiết kế sang trọng"
+      ],
+      "description": "Camera Hasselblad, màn 2K 120Hz, sạc nhanh 100W, thiết kế sang trọng.",
+      "tags": []
+    },
+    {
+      "id": "10",
+      "title": "Vivo X90 Pro+",
+      "name": "Vivo",
+      "category": "Smartphone",
+      "image": "/images/vivox90pro.jpg",
+      "price": 999,
+      "stock": 22,
+      "colors": [
+        "Legendary Black",
+        "China Red"
+      ],
+      "storageOptions": [
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2022-12-06",
+      "features": [
+        "Camera ZEISS optics",
+        "Snapdragon 8 Gen 2",
+        "Màn hình AMOLED 120Hz",
+        "Sạc nhanh 80W",
+        "Hiệu năng gaming xuất sắc"
+      ],
+      "description": "Chụp ảnh mạnh mẽ với ZEISS optics, Snapdragon 8 Gen 2, hiệu năng gaming xuất sắc.",
+      "tags": []
+    },
+    {
+      "id": "11",
+      "title": "Google Pixel 7 Pro",
+      "name": "Google",
+      "category": "Smartphone",
+      "image": "/images/pixel7pro.jpg",
+      "price": 899,
+      "salePrice": 849,
+      "stock": 28,
+      "colors": [
+        "Obsidian",
+        "Snow",
+        "Hazel"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2022-10-13",
+      "features": [
+        "Camera AI xuất sắc",
+        "Chip Tensor G2",
+        "Android gốc",
+        "Màn hình 120Hz mượt mà",
+        "Pin thông minh Adaptive Battery"
+      ],
+      "description": "Camera AI xuất sắc, Android gốc, chip Tensor G2, trải nghiệm mượt mà.",
+      "tags": [
+        "sale"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "OnePlus 11",
+      "name": "OnePlus",
+      "category": "Smartphone",
+      "image": "/images/oneplus11.jpg",
+      "price": 699,
+      "stock": 32,
+      "colors": [
+        "Titan Black",
+        "Eternal Green"
+      ],
+      "storageOptions": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ],
+      "releaseDate": "2023-01-09",
+      "features": [
+        "Snapdragon 8 Gen 2",
+        "Sạc nhanh 100W",
+        "Màn hình AMOLED 120Hz",
+        "Camera hợp tác Hasselblad",
+        "Thiết kế đẹp mắt"
+      ],
+      "description": "Thiết kế đẹp, Snapdragon 8 Gen 2, sạc nhanh 100W, hiệu năng ấn tượng.",
+      "tags": []
+    }
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin123!",
+      "fullName": "System Admin",
+      "avatar": "",
+      "secretQuestion": "What was your childhood nickname?",
+      "answer": "root",
+      "wishlist": [],
+      "cart": []
+    },
+    {
+      "id": 2,
+      "username": "soo",
+      "email": "anhthu@gmail.com",
+      "password": "Anhthu12@",
+      "fullName": "Anh Thu",
+      "avatar": "",
+      "secretQuestion": "In which city were you born?",
+      "answer": "Da Lat",
+      "wishlist": [],
+      "cart": []
+    }
+  ],
+  "orders": [
+    {
+      "id": 1756128185918,
+      "userId": "1",
+      "items": [
+        {
+          "id": "3",
+          "title": "iPhone 13 Mini",
+          "name": "Apple",
+          "category": "Smartphone",
+          "image": "/images/iphone13mini.jpg",
+          "price": 699,
+          "stock": 30,
+          "colors": [
+            "Pink",
+            "Blue",
+            "Midnight",
+            "Starlight"
+          ],
+          "storageOptions": [
+            "128GB",
+            "256GB"
+          ],
+          "releaseDate": "2021-09-24",
+          "features": [
+            "Thiết kế nhỏ gọn 5.4\"",
+            "Chip A15 Bionic",
+            "Camera kép 12MP",
+            "Face ID",
+            "Chế độ Night Mode"
+          ],
+          "description": "Nhỏ gọn 5.4\", hiệu năng mạnh mẽ, pin được cải thiện, thiết kế tinh tế.",
+          "tags": [],
+          "qty": 1
+        },
+        {
+          "id": "2",
+          "title": "iPhone 14",
+          "name": "Apple",
+          "category": "Smartphone",
+          "image": "/images/iphone14.jpg",
+          "price": 799,
+          "salePrice": 749,
+          "stock": 50,
+          "colors": [
+            "Midnight",
+            "Purple",
+            "Blue",
+            "Red"
+          ],
+          "storageOptions": [
+            "128GB",
+            "256GB",
+            "512GB"
+          ],
+          "releaseDate": "2022-09-16",
+          "features": [
+            "Chip A15 Bionic",
+            "Màn hình 6.1\" Super Retina XDR",
+            "Camera kép 12MP",
+            "Chế độ Cinematic Mode",
+            "Kết nối 5G"
+          ],
+          "description": "Thiết kế quen thuộc, chip A15 Bionic, camera kép chất lượng, hiệu năng mượt mà.",
+          "tags": [
+            "sale"
+          ],
+          "qty": 1
+        }
+      ],
+      "total": 1448,
+      "date": "2025-08-25T13:23:05.918Z",
+      "shippingInfo": {
+        "firstName": "Thu",
+        "lastName": "Nguyen",
+        "address": "32 Nguyen Du",
+        "city": "Da Lat",
+        "zipCode": "660000",
+        "phone": "0335436867"
+      },
+      "paymentMethod": "cod"
+    }
+  ]
+}
