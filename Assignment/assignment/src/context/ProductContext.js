@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useReducer } from 'react';
+import axios from 'axios';
 
 const ProductContext = createContext();
 
@@ -35,12 +36,13 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
       dispatch({ type: 'SET_LOADING' });
       try {
-        const res = await fetch('http://localhost:5000/products');
-        if (!res.ok) throw new Error('Failed to load products');
-        const data = await res.json();
-        dispatch({ type: 'SET_PRODUCTS', payload: data });
+        const res = await axios.get('http://localhost:5000/products');
+        dispatch({ type: 'SET_PRODUCTS', payload: res.data });
       } catch (err) {
-        dispatch({ type: 'SET_ERROR', payload: err.message || 'Unknown error' });
+        dispatch({
+          type: 'SET_ERROR',
+          payload: err.response?.data?.message || err.message || 'Unknown error',
+        });
       }
     };
     fetchProducts();

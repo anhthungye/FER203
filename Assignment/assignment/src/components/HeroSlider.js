@@ -14,23 +14,17 @@ const HeroSlider = () => {
     {
       id: 1,
       image: '/images/banner1.jpg',
-      alt: 'Special Offers',
-      title: 'Special Offers',
-      description: 'Get up to 50% off on selected items'
+      alt: 'Special Offers'
     },
     {
       id: 2,
       image: '/images/banner2.jpg',
-      alt: 'New Arrivals',
-      title: 'New Arrivals',
-      description: 'Check out our latest products'
+      alt: 'New Arrivals'
     },
     {
       id: 3,
       image: '/images/banner3.jpg',
-      alt: 'Free Shipping',
-      title: 'Free Shipping',
-      description: 'Free shipping on orders over $50'
+      alt: 'Free Shipping'
     }
   ];
 
@@ -66,10 +60,6 @@ const HeroSlider = () => {
               backgroundPosition: 'center'
             }}
           />
-          <Carousel.Caption className="bg-dark bg-opacity-50 p-4 rounded">
-            <h3>{slide.title}</h3>
-            <p>{slide.description}</p>
-          </Carousel.Caption>
         </Carousel.Item>
       ))}
     </Carousel>

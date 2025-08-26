@@ -8,17 +8,13 @@ export const ToastProvider = ({ children }) => {
 
   const addToast = (message, type = 'info') => {
     const id = Date.now();
-    setToasts([...toasts, { id, message, type }]);
-    
-    // Auto remove toast after 3 seconds
-    setTimeout(() => {
-      removeToast(id);
-    }, 3000);
+    setToasts(prev => [...prev, { id, message, type }]);
   };
 
   const removeToast = (id) => {
-    setToasts(toasts.filter(toast => toast.id !== id));
+    setToasts(prev => prev.filter(toast => toast.id !== id));
   };
+
 
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
@@ -28,7 +24,7 @@ export const ToastProvider = ({ children }) => {
           <Toast 
             key={toast.id} 
             onClose={() => removeToast(toast.id)}
-            bg={toast.type === 'error' ? 'danger' : toast.type}
+            bg={toast.type}
             delay={3000}
             autohide
           >

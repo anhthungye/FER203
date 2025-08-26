@@ -16,9 +16,10 @@ const Checkout = () => {
     zipCode: '',
     phone: ''
   });
-  
+
+  const [errors, setErrors] = useState({});
   const [paymentMethod, setPaymentMethod] = useState('credit_card');
-  
+
   const { user } = useAuth();
   const { items, getCartSubtotal, clearCart } = useCart();
   const { addToast } = useToast();
@@ -29,21 +30,48 @@ const Checkout = () => {
     if (!user) navigate('/login?redirect_uri=/checkout');
   }, [user, navigate]);
 
-
   useEffect(() => {
     if (items.length === 0) navigate('/cart');
   }, [items, navigate]);
 
   if (!user || items.length === 0) return null;
 
+  // xử lý thay đổi input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setShippingInfo({ ...shippingInfo, [name]: value });
+    setErrors({ ...errors, [name]: '' });
   };
 
+  const validate = () => {
+    let newErrors = {};
+    if (!shippingInfo.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!shippingInfo.lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!shippingInfo.address.trim()) newErrors.address = "Address is required";
+    if (!shippingInfo.city.trim()) newErrors.city = "City is required";
+    if (!shippingInfo.zipCode.trim()) {
+      newErrors.zipCode = "Zip Code is required";
+    } else if (!/^\d{4,6}$/.test(shippingInfo.zipCode)) {
+      newErrors.zipCode = "Zip Code must be 4-6 digits";
+    }
+    if (!shippingInfo.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\d{9,11}$/.test(shippingInfo.phone)) {
+      newErrors.phone = "Phone must be 9-11 digits";
+    }
+    return newErrors;
+  };
+
+  // xử lý submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    const formErrors = validate();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      addToast('Please fix the errors in the form', 'error');
+      return;
+    }
+
     try {
       const order = {
         id: Date.now(),
@@ -66,14 +94,11 @@ const Checkout = () => {
   return (
     <div className="ecommerce-checkout-page">
       <h2 className="mb-4">Checkout</h2>
-      
       <Row>
         <Col lg={8}>
           <Form onSubmit={handleSubmit}>
             <Card className="mb-4 ecommerce-checkout-card">
-              <Card.Header>
-                <h5>Shipping Information</h5>
-              </Card.Header>
+              <Card.Header><h5>Shipping Information</h5></Card.Header>
               <Card.Body>
                 <Row>
                   <Col md={6}>
@@ -84,8 +109,11 @@ const Checkout = () => {
                         name="firstName"
                         value={shippingInfo.firstName}
                         onChange={handleInputChange}
-                        required
+                        isInvalid={!!errors.firstName}
                       />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.firstName}
+                      </Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                   <Col md={6}>
@@ -96,12 +124,15 @@ const Checkout = () => {
                         name="lastName"
                         value={shippingInfo.lastName}
                         onChange={handleInputChange}
-                        required
+                        isInvalid={!!errors.lastName}
                       />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.lastName}
+                      </Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                 </Row>
-                
+
                 <Form.Group className="mb-3">
                   <Form.Label>Address</Form.Label>
                   <Form.Control
@@ -109,10 +140,13 @@ const Checkout = () => {
                     name="address"
                     value={shippingInfo.address}
                     onChange={handleInputChange}
-                    required
+                    isInvalid={!!errors.address}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.address}
+                  </Form.Control.Feedback>
                 </Form.Group>
-                
+
                 <Row>
                   <Col md={6}>
                     <Form.Group className="mb-3">
@@ -122,8 +156,11 @@ const Checkout = () => {
                         name="city"
                         value={shippingInfo.city}
                         onChange={handleInputChange}
-                        required
+                        isInvalid={!!errors.city}
                       />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.city}
+                      </Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                   <Col md={6}>
@@ -134,12 +171,15 @@ const Checkout = () => {
                         name="zipCode"
                         value={shippingInfo.zipCode}
                         onChange={handleInputChange}
-                        required
+                        isInvalid={!!errors.zipCode}
                       />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.zipCode}
+                      </Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                 </Row>
-                
+
                 <Form.Group className="mb-3">
                   <Form.Label>Phone</Form.Label>
                   <Form.Control
@@ -147,16 +187,17 @@ const Checkout = () => {
                     name="phone"
                     value={shippingInfo.phone}
                     onChange={handleInputChange}
-                    required
+                    isInvalid={!!errors.phone}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.phone}
+                  </Form.Control.Feedback>
                 </Form.Group>
               </Card.Body>
             </Card>
-            
+
             <Card className="mb-4">
-              <Card.Header>
-                <h5>Payment Method</h5>
-              </Card.Header>
+              <Card.Header><h5>Payment Method</h5></Card.Header>
               <Card.Body>
                 <Form.Check
                   type="radio"
@@ -189,7 +230,7 @@ const Checkout = () => {
                 />
               </Card.Body>
             </Card>
-            
+
             <Button type="submit" variant="primary" size="lg" className="w-100 d-flex align-items-center justify-content-center">
               <Lock size={20} className="me-2" />
               Place Order
@@ -197,11 +238,10 @@ const Checkout = () => {
           </Form>
         </Col>
         
+        {/* Order Summary giữ nguyên */}
         <Col lg={4}>
           <Card>
-            <Card.Header>
-              <h5>Order Summary</h5>
-            </Card.Header>
+            <Card.Header><h5>Order Summary</h5></Card.Header>
             <Card.Body>
               {items.map(item => (
                 <div key={item.id} className="d-flex justify-content-between align-items-center mb-2">
@@ -212,9 +252,7 @@ const Checkout = () => {
                   <span>${(item.price * item.qty).toFixed(2)}</span>
                 </div>
               ))}
-              
               <hr />
-              
               <div className="d-flex justify-content-between mb-2">
                 <span>Subtotal</span>
                 <span>${getCartSubtotal().toFixed(2)}</span>
@@ -227,10 +265,9 @@ const Checkout = () => {
                 <span>Total</span>
                 <span>${getCartSubtotal().toFixed(2)}</span>
               </div>
-              
               <Alert variant="info" className="small">
                 <CreditCard size={16} className="me-2" />
-                Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
+                Your personal data will be used to process your order.
               </Alert>
             </Card.Body>
           </Card>
