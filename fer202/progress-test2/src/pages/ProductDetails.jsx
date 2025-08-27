@@ -23,7 +23,7 @@ export default function ProductDetails() {
       try {
         const { data } = await api.get(`/products/${id}`)
         setProduct(data)
-      } catch (err) {
+      } catch {
         setError('Product not found')
       } finally {
         setLoading(false)

@@ -38,7 +38,7 @@ export default function LoginPage() {
       } else {
         setError('Email hoặc mật khẩu không chính xác.')
       }
-    } catch (error) {
+    } catch {
       setError('Đã xảy ra lỗi khi đăng nhập. Vui lòng thử lại sau.')
     } finally {
       setLoading(false)
