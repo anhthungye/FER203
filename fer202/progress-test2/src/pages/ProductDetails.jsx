@@ -82,7 +82,7 @@ export default function ProductDetails() {
             <Col md={6}>
               <Card.Img
                 variant="top"
-                src={product.image}
+                src={`/${product.image}`}
                 alt={product.name}
                 style={{ width: '100%', objectFit: 'cover' }}
               />
